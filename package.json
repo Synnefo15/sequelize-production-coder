@@ -8,5 +8,12 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.20.1",
     "sequelize-cli": "^6.4.1"
+  },
+  "scripts": {
+    "make-model":"sequelize model:generate --name user --attributes email:string",
+    "migrate":"sequelize db:migrate",
+    "down":"sequelize db:migrate:undo",
+    "make-seed":"sequelize seed:generate --name demo-user",
+    "seed":"sequelize db:seed:all"
   }
 }
